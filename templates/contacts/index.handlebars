@@ -1,11 +1,13 @@
 {{#collection}}
-	<strong>{{firstname}} {{lastname}}   </strong><a href="#">delete</a>
+	<strong>{{firstname}} {{lastname}}   </strong>
+	<a class="delete" href="#">delete</a>
+	<a class="edit" href="#">edit</a>
 	<ul>
 		<li>Phone: {{phone}}</li>
 		<li>Email: {{email}}</li>
 	</ul>
 {{/collection}}
-<form>
+<form name="">
 	<p><Lable>First Name: <input name="firstname"></Lable></p>
 	<p><Lable>Last Name:<input name="lastname"></Lable></p>
 	<p><Lable>Email: <input name="email"></Lable></p>
