@@ -19,13 +19,13 @@ Application.View.extend({
     },
   	"click a.delete": function(){
   		event.preventDefault();
-  		var id = $(event.srcElement).data("model-cid");
+  		var id = $(event.srcElement).parent().data("model-cid");
         var item = this.collection.get(id);
   		this.collection.remove(item);
   	},
   "click a.edit": function(){
         event.preventDefault();
-        var id = $(event.srcElement).data("model-cid");
+        var id = $(event.srcElement).parent().data("model-cid");
         var attrs = this.collection.get(id).attributes;
         this.$('form').attr("name", "edit");
         this.$('form').data("model-cid", id);
@@ -35,6 +35,17 @@ Application.View.extend({
         }
         
       },
+  "click strong": function(){
+        event.preventDefault();
+        var cid = $(event.srcElement).parent().data("model-cid");
+        var contactModel = this.collection.get(cid);
+        var detailView = new Application.Views["contacts/detail"]({
+          model: contactModel
+        });
+        Application.setView(detailView, {destroy:false});
+
+      }
+
 
   }
 });

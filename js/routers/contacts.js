@@ -5,23 +5,23 @@ new (Backbone.Router.extend({
   		firstname: "Rob",
   		lastname: "Gerstenberger",
   		email: "rgerstenberger@example.com",
-  		phone: "425 894 4445"
+  		phone: "425 666 6666"
   	});
 
   	var contacttwo = new Application.Models["contacts/Contact"]({
   		firstname: "James",
   		lastname: "Gerstenberger",
-  		email: "Jag@example.com",
+  		email: "Jg@example.com",
   		phone: "425 555 5555"
   	});
 
-  	var collection = new Application.Collections["contacts/Contacts"]([
+  	Application.Collections.contacts = new Application.Collections["contacts/Contacts"]([
   		contactone,
   		contacttwo
   	]);
-  	var view = new Application.Views["contacts/index"]({
-  		collection: collection
+  	Application.Views.indexView = new Application.Views["contacts/index"]({
+  		collection: Application.Collections.contacts
   	});
-  	Application.setView(view);
+  	Application.setView(Application.Views.indexView);
   }
 }));

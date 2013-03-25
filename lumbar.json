@@ -41,7 +41,8 @@
         "js/routers/contacts.js",
         "js/views/contacts/index.js",
         "js/models/contacts/Contact.js",
-        "js/collections/contacts/Contacts.js"
+        "js/collections/contacts/Contacts.js",
+        "js/views/contacts/detail.js"
       ],
       "styles": [
         "stylesheets/contacts.css"
