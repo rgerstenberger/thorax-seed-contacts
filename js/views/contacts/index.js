@@ -5,6 +5,8 @@ Application.View.extend({
   		event.preventDefault();
   		var attrs = this.serialize();
   		this.collection.add(attrs);
+      this.collection.last().set({id: Application.idPlaceholder});
+      Application.idPlaceholder++;
   		this.$('input[type!="submit"]').val('');
   	},
     'submit form[name="edit"]': function(){

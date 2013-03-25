@@ -17,6 +17,8 @@ new (Backbone.Router.extend({
       id: 2
   	});
 
+    Application.idPlaceholder = 3;
+
   	Application.Collections.contacts = new Application.Collections["contacts/Contacts"]([
   		contactone,
   		contacttwo
