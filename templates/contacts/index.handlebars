@@ -1,12 +1,12 @@
 <h2>Contacts</h2>
 {{#collection tag="ul"}}
-	<li  data-model-cid="{{cid}}">
-		<strong>{{firstname}} {{lastname}}   </strong>
+	<li>
+		{{#link "detail/{{id}}" expand-tokens=true }}<strong>{{firstname}} {{lastname}}   </strong>{{/link}}
 		<a class="delete" href="#"> delete </a>
 		<a class="edit" href="#"> edit </a>
 	</li>
 {{/collection}}
-<form name="">
+<form name="add">
 	<p><Lable>First Name: <input name="firstname"></Lable></p>
 	<p><Lable>Last Name:<input name="lastname"></Lable></p>
 	<p><Lable>Email: <input name="email"></Lable></p>

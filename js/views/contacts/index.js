@@ -35,16 +35,7 @@ Application.View.extend({
         }
         
       },
-  "click strong": function(){
-        event.preventDefault();
-        var cid = $(event.srcElement).parent().data("model-cid");
-        var contactModel = this.collection.get(cid);
-        var detailView = new Application.Views["contacts/detail"]({
-          model: contactModel
-        });
-        Application.setView(detailView, {destroy:false});
 
-      }
 
 
   }

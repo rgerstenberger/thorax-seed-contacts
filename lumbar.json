@@ -35,7 +35,9 @@
     },
     "contacts": {
       "routes": {
-        "": "index"
+        "": "index",
+        "detail/:id": "detail",
+        "home": "home"
       },
       "scripts": [
         "js/routers/contacts.js",
