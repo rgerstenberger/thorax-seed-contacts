@@ -37,14 +37,17 @@
       "routes": {
         "": "index",
         "detail/:id": "detail",
-        "home": "home"
+        "home": "home",
+        "edit/:id": "edit",
+        "new": "new"
       },
       "scripts": [
         "js/routers/contacts.js",
         "js/views/contacts/index.js",
         "js/models/contacts/Contact.js",
         "js/collections/contacts/Contacts.js",
-        "js/views/contacts/detail.js"
+        "js/views/contacts/detail.js",
+        "js/views/contacts/update.js"
       ],
       "styles": [
         "stylesheets/contacts.css"

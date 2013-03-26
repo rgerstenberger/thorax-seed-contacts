@@ -1,4 +1,4 @@
-<h2>Contacts</h2>
+<h2>Contacts {{#link "new" tag="button"}}New{{/link}}</h2>
 {{#collection tag="ul"}}
 	<li>
 		{{#link "detail/{{id}}" expand-tokens=true }}<strong>{{firstname}} {{lastname}}   </strong>{{/link}}

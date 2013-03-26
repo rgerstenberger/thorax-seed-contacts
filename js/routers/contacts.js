@@ -41,5 +41,25 @@ new (Backbone.Router.extend({
       collection: Application.Collections.contacts
     });
     Application.setView(indexView);
+  },
+
+  edit: function(id){
+    var updateView = new Application.Views["contacts/update"]({
+      model: Application.Collections.contacts.get(id)
+    });
+    Application.setView(updateView);
+  },
+
+  new: function(){
+    var newContact = new Application.Models["contacts/Contact"]({
+        id:Application.idPlaceholder
+      });
+    Application.Collections.contacts.add(newContact);
+    var updateView = new Application.Views["contacts/update"]({
+      model: newContact
+    })    
+    Application.idPlaceholder++;
+    Application.setView(updateView);
   }
+
 }));
